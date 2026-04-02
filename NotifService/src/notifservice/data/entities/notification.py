@@ -12,7 +12,6 @@ from notifservice.data.valueObjects.notifContent import NotifContent
 class Notification:
     id: UUID
     createdAt: datetime
-    updatedAt: datetime
     notifType: NotifType
     userID: UUID
     notifStatus: NotifStatus

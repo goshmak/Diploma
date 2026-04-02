@@ -14,7 +14,6 @@ def makeNotification(
     *,
     id: UUID | None = None,
     createdAt: datetime | None = None,
-    updatedAt: datetime | None = None,
     notifType: NotifType = NotifType.NewTask,
     userID: UUID | None = None,
     notifStatus: NotifStatus = NotifStatus.Sent,
@@ -24,7 +23,6 @@ def makeNotification(
     return Notification(
         id=id or uuid4(),
         createdAt=createdAt or datetime.now(),
-        updatedAt=updatedAt or datetime.now(),
         notifType=notifType,
         userID=userID or uuid4(),
         notifStatus=notifStatus,
